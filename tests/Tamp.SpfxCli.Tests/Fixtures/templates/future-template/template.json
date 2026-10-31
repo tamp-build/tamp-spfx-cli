@@ -1,0 +1,7 @@
+{
+  "name": "future-template",
+  "category": "extension",
+  "version": "2.0.0",
+  "spfxVersion": "1.24.0",
+  "minimumEngineVersion": "0.2.0",
+}

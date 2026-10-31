@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
+    <RootNamespace>Tamp.SpfxCli</RootNamespace>
+    <AssemblyName>Tamp.SpfxCli</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Package">
+    <PackageId>Tamp.SpfxCli</PackageId>
+    <Description>Tamp wrapper for the SharePoint Framework CLI (@microsoft/spfx-cli): typed spfx create / list-templates with template sources pinned to a commit, the CLI's environment-variable behaviours locked down (deterministic ids, source redirection, token forwarding), a reader for the .spfx-scaffold.jsonl provenance log, a scaffold policy, and a template catalog for vendored template sources.</Description>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <IsPackable>true</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="$(TampCorePath)" Condition="'$(TampCoreMode)' == 'project'" />
+    <PackageReference Include="Tamp.Core" Condition="'$(TampCoreMode)' == 'package'" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,52 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "contoso-hello-client-side-solution",
+    "id": "8df00e32-5d8f-4f23-a5d1-19748ab1cd04",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.22.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "Hello Tamp description"
+      },
+      "longDescription": {
+        "default": "Hello Tamp description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "contoso-hello Feature",
+        "description": "The feature that activates elements of the contoso-hello solution.",
+        "id": "2dc15ab3-a22f-45ec-8e51-f9fcead7048a",
+        "version": "1.0.0.0"
+      },
+      {
+        "title": "Application Extension - Deployment of custom action",
+        "description": "Deploys a custom action with ClientSideComponentId association",
+        "id": "2ece9fee-aa96-4d01-879d-2dab8062c578",
+        "version": "1.0.0.0",
+        "assets": {
+          "elementManifests": [
+            "elements.xml",
+            "ClientSideInstance.xml"
+          ]
+        }
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/contoso-hello.sppkg"
+  }
+}
