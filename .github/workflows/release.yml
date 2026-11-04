@@ -119,7 +119,7 @@ jobs:
       # policy stops trusting requests. No long-lived org secret.
       - name: NuGet login (OIDC -> temp API key)
         if: ${{ github.event_name == 'push' || inputs.dry_run == false }}
-        uses: NuGet/login@v1
+        uses: NuGet/login@8d196754b4036150537f80ac539e15c2f1028841 # v1.2.0
         id: nuget-login
         with:
           user: BrewingCoder
